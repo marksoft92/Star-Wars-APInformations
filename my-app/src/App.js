@@ -1,8 +1,9 @@
 import React from 'react';
 
-import HomeApp from './HomeApp/HomeApp.js';
+
+import Routes from './Routes/Routes.js';
 import './App.css';
-import { BrowserRouter, Route } from 'react-router-dom';
+
 class App extends React.Component {
 
   render() {
@@ -10,9 +11,9 @@ class App extends React.Component {
       .then(response => response.json())
       .then(data => console.log(data));
     return (
-      <BrowserRouter>
-        <Route exact path='/' component={HomeApp} />
-      </BrowserRouter>
+
+      <Routes />
+
     )
   }
 }
